@@ -1,0 +1,17 @@
+python ../src/10_infer_text_softprompt.py ^
+  --bin_dir ../data/binpack ^
+  --soft_ckpt ../runs/softprompt_midicaps/softprompt_ep02.pt ^
+  --ctrl_vocab ../data/ctrl_vocab.json ^
+  --out_dir ../data/infer_out ^
+  --prompt_text "dark epic orchestral with choir and low strings" ^
+  --captions_csv ../data/splits/train_5k.csv ^
+  --tokens_jsonl ../data/tokens/train_5k.jsonl ^
+  --primer_bars 8 ^
+  --tempo_bpm 120 ^
+  --duration_seconds 30 ^
+  --time_signature 4/4 ^
+  --temperature 1.2 ^
+  --top_p 0.95 ^
+  --max_new_tokens 3000 ^
+  --allow_programs 40,41,42,43,44,45,46,47,48 ^
+  --ban_drums

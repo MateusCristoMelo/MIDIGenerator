@@ -1,0 +1,11 @@
+python ../src/09_finetune_softprompt.py ^
+  --train_jsonl ../data/tokens/train_20k.jsonl ^
+  --val_jsonl   ../data/tokens/val_20k.jsonl ^
+  --text_train_parquet ../data/text_embeds/train_20k.parquet ^
+  --text_val_parquet   ../data/text_embeds/val_20k.parquet ^
+  --bin_dir ../data/binpack_20k ^
+  --out_dir ../runs/softprompt_midicaps_20k ^
+  --seq_len 1024 ^
+  --batch_size 2 ^
+  --epochs 2 ^
+  --n_soft 32

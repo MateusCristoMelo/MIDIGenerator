@@ -1,0 +1,1 @@
+python ..\src\01_prepare_midicaps.py --sample_size 20000 --out_csv ..\data\splits\split_20k.csv

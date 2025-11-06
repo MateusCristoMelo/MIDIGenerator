@@ -1,0 +1,11 @@
+python ../src/07_train_gpt.py ^
+  --bin_dir ../data/binpack_20k ^
+  --seq_len 1024 ^
+  --batch_size 2 ^
+  --epochs 2 ^
+  --lr 2e-4 ^
+  --warmup_steps 200 ^
+  --grad_accum 4 ^
+  --out_dir ../runs/gpt_midicaps_20k ^
+  --max_steps_per_epoch 2000 ^
+  --print_every 20

@@ -1,0 +1,17 @@
+python ../src/11_infer_continue_softprompt.py ^
+  --bin_dir ../data/binpack ^
+  --soft_ckpt ../runs/softprompt_midicaps/softprompt_ep02.pt ^
+  --ctrl_vocab ../data/ctrl_vocab.json ^
+  --out_dir ../data/infer_out ^
+  --out_name gen_text_CONTINUED.mid ^
+  --prompt_text "dark epic orchestral with choir and low strings" ^
+  --source_midi ../data/infer_out/gen_text.mid ^
+  --tail_bars 4 ^
+  --tempo_bpm 120 ^
+  --duration_seconds 30 ^
+  --time_signature 4/4 ^
+  --temperature 1.2 ^
+  --top_p 0.95 ^
+  --top_k 50 ^
+  --max_new_tokens 3000 ^
+  --allow_programs 40,41,42,43,44,45,46,47,48
